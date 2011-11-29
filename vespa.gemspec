@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Philip Dodds"]
   s.date = "2011-11-29"
-  s.description = "TODO: longer description of your gem"
+  s.description = "A simple command line interface to the JBoss HornetQ RESTful API"
   s.email = "philip.dodds@me.com"
   s.executables = ["vespa"]
   s.extra_rdoc_files = [
@@ -24,13 +24,14 @@ Gem::Specification.new do |s|
     "Rakefile",
     "bin/vespa",
     "lib/cli.rb",
-    "lib/topic.rb"
+    "lib/topic.rb",
+    "vespa.gemspec"
   ]
   s.homepage = "http://github.com/pdodds/vespa"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.10"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "A simple command line interface to JBoss HornetQ RESTful API"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
