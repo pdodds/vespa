@@ -4,7 +4,7 @@
 *NOTE:* Right now, this gem requires ruby 1.8.7 to run. We are working on testing it on ruby 1.9.x and will update the gem when it's ready. 
 
 === OS X
-Ruby is installed by default on Leopard and Snow Leopard (10.5, 10.6).  You will, however, need to install XCode in order to use the KRL gem. XCode can be found on your OS X install DVDs or from here: http://developer.apple.com/technologies/xcode.html
+Ruby is installed by default on Leopard and Snow Leopard (10.5, 10.6).  You will, however, need to install XCode in order to use the vespa gem. XCode can be found on your OS X install DVDs or from here: http://developer.apple.com/technologies/xcode.html
 
 
 === Linux
@@ -52,15 +52,13 @@ You should see:
 
 == Install the gem
 From a command line type:
-  sudo gem install krl
+  sudo gem install vespa
 
 Windows users can leave off the "sudo"
 
-== Authenticating
+== Pushing a message
 From a command line type:
-  krl-connect
-
-This will launch a lightweight web server that will allow you to perform the OAuth ceremony with the Kynetx servers.  Open a browser and go to http://localhost:3009 and follow the instructions. Once completed, you can go back to your terminal and stop the web server by pressing ctrl+c.
+  vespa
 
 == Using the Gem
 For detailed instructions on using the gem type:
