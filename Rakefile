@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "vespa"
   gem.homepage = "http://github.com/pdodds/vespa"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A simple command line interface to JBoss HornetQ RESTful API }
+  gem.description = %Q{A simple command line interface to the JBoss HornetQ RESTful API}
   gem.email = "philip.dodds@me.com"
   gem.authors = ["Philip Dodds"]
   # dependencies defined in Gemfile
