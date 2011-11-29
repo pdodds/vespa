@@ -14,8 +14,9 @@ command :topic do |c|
   c.option '--server <servername>', String, 'The name of the server (default:localhost)'
   c.option '--port <port>', String, 'The HTTP port (default:8080)'
   c.option '--context <prefix>', String, 'The context path (default:messaging)'
-  c.option '--payload <message>', String, 'Enqueue the message'
+  c.option '--payload <message>', String, 'Payload for the message (used to ignore stdin)'
   c.option '--pull', 'Pull the next message'
+  c.option '--push', 'Push a message'
   c.option '--durable', 'Set durable on pull'
   c.option '--subscriber <name>', String, 'Set the name of the subscriber (default:bob)'
   c.action do |args, options|
@@ -24,7 +25,10 @@ command :topic do |c|
     topic = Topic.new(options.server,options.port,options.context,args[0],options.subscriber)
     if !(options.payload.nil?)
     	topic.enqueue(options.payload,options.durable)
+    elsif !(options.push.nil?)
+      topic.enqueue($stdin.read,options.durable)
     end
+
     if !(options.pull.nil?)
     	topic.dequeue(options.durable)
     end

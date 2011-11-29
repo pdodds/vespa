@@ -19,7 +19,9 @@ To pull a message
 To push a message
 
   /bin/vespa topic jms.topic.example.topic --server bus.mycompany.com -payload "<invoice><line amount='$10'/></invoice>"
+Using pipes
 
+  cat README.rdoc | ./bin/vespa topic jms.topic.example.topic --push --pull --server bus.mycompany.com
 
 == Using the Gem
 For detailed instructions on using the gem type:
