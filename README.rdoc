@@ -56,12 +56,20 @@ From a command line type:
 
 Windows users can leave off the "sudo"
 
-== Pushing a message
+== Some Examples
 From a command line type:
-  vespa
+
+To pull a message
+
+  /bin/vespa topic jms.topic.example.topic --pull  --server bus.mycompany.com --subscriber accounting > output_message.txt
+
+To push a message
+
+  /bin/vespa topic jms.topic.example.topic --server bus.mycompany.com -payload "<invoice><line amount='$10'/></invoice>"
+
 
 == Using the Gem
 For detailed instructions on using the gem type:
-  krl help
+  vespa help
 or
-  krl help [TASK]
+  vespa help [TASK]
