@@ -5,7 +5,7 @@ require_relative 'topic'
 
 appname = "vespa"
 program :name, 'JBoss HornetQ RESTful command line'
-program :version, '0.0.1'
+program :version, '0.0.2'
 program :description, 'Interact with the JBoss HornetQ RESTful API from the command line'
 
 command :topic do |c|
@@ -25,11 +25,11 @@ command :topic do |c|
     topic = Topic.new(options.server,options.port,options.context,args[0],options.subscriber)
     if !(options.payload.nil?)
     	topic.enqueue(options.payload,options.durable)
-    elsif !(options.push.nil?)
+    elsif options.push
       topic.enqueue($stdin.read,options.durable)
     end
 
-    if !(options.pull.nil?)
+    if options.pull
     	topic.dequeue(options.durable)
     end
   end
