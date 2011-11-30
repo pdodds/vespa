@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "vespa"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Philip Dodds"]
-  s.date = "2011-11-29"
+  s.date = "2011-11-30"
   s.description = "A simple command line interface to the JBoss HornetQ RESTful API"
   s.email = "philip.dodds@me.com"
   s.executables = ["vespa"]
